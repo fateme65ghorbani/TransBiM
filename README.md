@@ -3,7 +3,7 @@ TransBiM: Antimicrobial Peptide Prediction through a Transformer based Method En
 
 TransBiM is an advanced deep learning framework designed for the accurate prediction of antimicrobial peptides (AMPs). By integrating large language model embeddings, bidirectional sequence modeling, and transformer-based attention mechanisms, TransBiM achieves state-of-the-art performance on multiple benchmark datasets.
 
-# Methodology
+## Methodology
 TransBiM employs a three-stage hybrid architecture:
 
 # Feature Extraction with T5-XL
