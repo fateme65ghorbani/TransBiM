@@ -16,7 +16,7 @@ The final sequence representations are fed into a fully connected MLP consisting
 This hybrid design effectively leverages the strengths of LLM-based embeddings, sequential pattern learning, and deep feature abstraction.
 ## Visualization architectural model
 ![Fig1 ](https://github.com/user-attachments/assets/b9d74094-f135-4a6a-a115-73968a61df88)
-Figure 1 visualizes the complete workflow of TransBiM:
+Figure 1 shows the complete workflow of TransBiM:
 
 (A) Input peptide sequences
 (B) Embedding generation using T5-XL
@@ -24,21 +24,18 @@ Figure 1 visualizes the complete workflow of TransBiM:
 (D) Enhancement through Transformer Encoder with Attention
 (E) Final classification using fully connected layers (MLP with ReLU, Dropout, and SoftMax)
 ## Datasets
+
 TransBiM is evaluated on six publicly available datasets:
-Dataset	Source Link
-DS1 	             https://github.com/williamdee1/LMPred_AMP_Prediction
 
-DS2	               https://github.com/Wangsicheng52/E-CLEAP
+| Dataset | Source Link |
+|--------|-------------|
+| DS1    | [LMPred_AMP_Prediction](https://github.com/williamdee1/LMPred_AMP_Prediction) |
+| DS2    | [E-CLEAP](https://github.com/Wangsicheng52/E-CLEAP) |
+| DS3    | [UniproLcad](https://github.com/harkic/UniproLcad) |
+| DS4    | [diff-amp](https://github.com/wrab12/diff-amp) |
+| DS5    | [sAMP-VGG16 Dataset](https://figshare.com/articles/dataset/Supporting_Data_for_manuscript_entitled_sAMP-VGG16_Force-field_assisted_image-based_deep_neural_network_prediction_model_for_short_antimicrobial_peptides_/25403680) |
+| DS6    | [Antimicrobials_](https://github.com/Shazzad-Shaon3404/Antimicrobials_) |
 
-DS3	               https://github.com/harkic/UniproLcad
-
-DS4	               https://github.com/wrab12/diff-amp
-
-DS5              
-https://figshare.com/articles/dataset/Supporting_Data_for_manuscript_entitled_sAMP-VGG16_Force-field_assisted_image-based_deep_neural_network_prediction_model_for_short_antimicrobial_peptides_/25403680
-
-DS6	 
-<https://github.com/Shazzad-Shaon3404/Antimicrobials_>
 
 
 ## Project Structure
@@ -70,16 +67,20 @@ Dataset4_CV_Training_and_Final_Testing.ipynb
 Implements cross-validation (CV) training and reports averaged metrics for DS4.
 
 ## How to Run
-### Train TransBiM on DS1 from scratch:
 
-Execute 01_Word_Embeddings_Creation.ipynb
-Then 02_TransBiM_Model_Architecture.ipynb
-Finally 03_TransBiM_Training_and_Testing.ipynb
-### Evaluate TransBiM on DS2-DS6:
+### 🏋️ Train TransBiM on DS1 from scratch:
 
-Preprocess each dataset using the corresponding DatasetX_Clone_and_Split.ipynb
-Run Final_Testing_Multiple_Datasets.ipynb to evaluate.
-In datasets 3 and 6, we had independent test sets, as mentioned in the related paper from which the data was obtained. Therefore, in this code, we did not perform a 70-20-10 split, and we only had training and test data.
+1. Run `01_Word_Embeddings_Creation.ipynb` to generate T5-XL embeddings.
+2. Execute `02_TransBiM_Model_Architecture.ipynb` to prepare the model.
+3. Run `03_TransBiM_Training_and_Testing.ipynb` to train and validate.
+
+### 📊 Evaluate TransBiM on DS2–DS6:
+
+1. Preprocess each dataset with `DatasetX_Clone_and_Split.ipynb`.
+2. Run `Final_Testing_Multiple_Datasets.ipynb` for final evaluation.
+
+ℹ️ **Note:** For DS3 and DS6, only training and test data are used (no 70-20-10 split).
+
 ## Requirements
 Python: 3.6.12
 TensorFlow: 2.1
