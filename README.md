@@ -30,13 +30,17 @@ TransBiM is evaluated on six publicly available datasets:
 
 Dataset	Source Link
 DS1 	             https://github.com/williamdee1/LMPred_AMP_Prediction
+
 DS2	               https://github.com/Wangsicheng52/E-CLEAP
+
 DS3	               https://github.com/harkic/UniproLcad
+
 DS4	               https://github.com/wrab12/diff-amp
-DS5                https://figshare.com/articles/dataset/Supporting_Data_for_manuscript_entitled_sAMP-VGG16_Force-field_assisted_image- 
-                   based_deep_neural_network_prediction_model_for_short_antimicrobial_peptides_/25403680
-DS6	              https://github.com/Shazzad-Shaon3404/Antimicrobials_
-For robust model evaluation, all datasets were stratified into training (70%), validation (20%), and testing (10%) subsets to preserve AMP/non-AMP class distributions.
+
+DS5              
+https://figshare.com/articles/dataset/Supporting_Data_for_manuscript_entitled_sAMP-VGG16_Force-field_assisted_image-based_deep_neural_network_prediction_model_for_short_antimicrobial_peptides_/25403680
+DS6	             
+https://github.com/Shazzad-Shaon3404/Antimicrobials_
 ## Project Structure
 This repository is organized into two main parts:
 
