@@ -16,7 +16,7 @@ The embeddings are processed by a Bidirectional LSTM (Bi-LSTM) layer to model lo
 The final sequence representations are fed into a fully connected MLP consisting of two dense layers with ReLU activations, Dropout for regularization, and a SoftMax output layer to predict AMP activity.
 
 This hybrid design effectively leverages the strengths of LLM-based embeddings, sequential pattern learning, and deep feature abstraction.
-## Model Architecture Illustration
+## Visualization architectural model
 ![Fig1 ](https://github.com/user-attachments/assets/b9d74094-f135-4a6a-a115-73968a61df88)
 Figure 1 visualizes the complete workflow of TransBiM:
 
