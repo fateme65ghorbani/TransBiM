@@ -8,13 +8,11 @@ TransBiM employs a three-stage hybrid architecture:
 
 ### Feature Extraction with T5-XL
 Peptide sequences are embedded using the T5-XL model, a powerful pre-trained Transformer optimized for biological sequence representation. It generates 1024-dimensional embeddings that capture both structural and functional features.
-
 ### Sequence Modeling with Bi-LSTM and Transformer Encoder
 The embeddings are processed by a Bidirectional LSTM (Bi-LSTM) layer to model local and global dependencies in both forward and backward directions. A Transformer Encoder with Self-Attention further captures complex, long-range interactions between amino acid residues.
 
 ### Classification via Multi-Layer Perceptron (MLP)
 The final sequence representations are fed into a fully connected MLP consisting of two dense layers with ReLU activations, Dropout for regularization, and a SoftMax output layer to predict AMP activity.
-
 This hybrid design effectively leverages the strengths of LLM-based embeddings, sequential pattern learning, and deep feature abstraction.
 ## Visualization architectural model
 ![Fig1 ](https://github.com/user-attachments/assets/b9d74094-f135-4a6a-a115-73968a61df88)
@@ -27,7 +25,6 @@ Figure 1 visualizes the complete workflow of TransBiM:
 (E) Final classification using fully connected layers (MLP with ReLU, Dropout, and SoftMax)
 ## Datasets
 TransBiM is evaluated on six publicly available datasets:
-
 Dataset	Source Link
 DS1 	             https://github.com/williamdee1/LMPred_AMP_Prediction
 
@@ -41,8 +38,8 @@ DS5
 https://figshare.com/articles/dataset/Supporting_Data_for_manuscript_entitled_sAMP-VGG16_Force-field_assisted_image-based_deep_neural_network_prediction_model_for_short_antimicrobial_peptides_/25403680
 
 DS6	 
-
 https://github.com/Shazzad-Shaon3404/Antimicrobials_
+
 ## Project Structure
 This repository is organized into two main parts:
 
